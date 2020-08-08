@@ -1,6 +1,8 @@
 package com.huazai.springcloud.hystrix.payment.controller;
 
 import com.huazai.springcloud.hystrix.payment.service.PaymentService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,11 +21,11 @@ public class PaymentHystrixController {
 
     @GetMapping("/paymentInfo_ok/{id}")
     public String paymentInfo_ok(@PathVariable("id") Long id) {
-        return "result：" + paymentService.paymentInfo_ok(id);
+        return "result：" + paymentService.paymentInfoOK(id);
     }
 
     @GetMapping("/paymentInfo_timeout/{id}")
-    public String paymentInfo_timeout(@PathVariable("id") Long id) {
-        return "result：" + paymentService.paymentInfo_timeout(id);
+    public String paymentInfoTimeout(@PathVariable("id") Long id) {
+        return "result：" + paymentService.paymentInfoTimeout(id);
     }
 }

@@ -11,6 +11,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class IRuleConfiguration {
+    /**
+     * 配置负载均衡规则
+     *
+     * @return
+     */
     @Bean
     public IRule randomRule() {
         return new RandomRule();
