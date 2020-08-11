@@ -8,4 +8,6 @@ public interface PaymentService {
     String paymentInfoOK(Long id);
 
     String paymentInfoTimeout(Long id);
+
+    String paymentCircuitBreaker(Long id);
 }
