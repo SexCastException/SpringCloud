@@ -56,6 +56,11 @@ public class PaymentController {
         return CommonResult.failure();
     }
 
+    @GetMapping("/serverPort")
+    public String test() {
+        return "test " + serverPort;
+    }
+
     @GetMapping("/discovery")
     public Object discovery() {
         // 获取服务清单列表

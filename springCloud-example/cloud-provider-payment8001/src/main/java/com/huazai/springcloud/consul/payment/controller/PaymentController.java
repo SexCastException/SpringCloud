@@ -47,6 +47,11 @@ public class PaymentController {
         return CommonResult.failure();
     }
 
+    @GetMapping("/serverPort")
+    public String test() {
+        return "test " + serverPort;
+    }
+
     @GetMapping(value = "/feign/timeout")
     public String paymentFeignTimeout() {
         try {
