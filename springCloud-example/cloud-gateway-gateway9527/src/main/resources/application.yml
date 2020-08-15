@@ -23,6 +23,8 @@ spring:
             - After=2020-08-14T00:03:06.794+08:00[Asia/Shanghai]
 #            - Cookie=username, pyh
             - Header=X, \d+
+          filters:
+            - AddRequestParameter=X-Request-Id,1024 #过滤工厂会在匹配的请求头加上一对请求头，名称为X-Request-Id，值为1024
 
 
 eureka:
