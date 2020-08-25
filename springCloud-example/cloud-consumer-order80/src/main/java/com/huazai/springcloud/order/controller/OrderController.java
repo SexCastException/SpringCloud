@@ -34,5 +34,13 @@ public class OrderController {
         return restTemplate.getForObject(PAYMENT_URL + "payment/get/" + id, CommonResult.class);
     }
 
+    // ====================> zipkin+sleuth
+    @GetMapping("/zipkin")
+    public String paymentZipkin()
+    {
+        String result = restTemplate.getForObject(PAYMENT_URL + "payment/zipkin", String.class);
+        return result;
+    }
+
 
 }
