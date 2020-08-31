@@ -11,4 +11,6 @@ spring:
       config:
         server-addr: localhost:8848 #配置中心地址
         file-extension: yml #指定yaml格式的配置
+        group: DEFAULT_GROUP #指定分组，默认：DEFAULT_GROUP
+        namespace: deb8b98e-4c65-4b1e-acfa-332ebfa66945
 
