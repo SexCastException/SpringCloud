@@ -1,6 +1,6 @@
 package com.huazai.springcloud.alibaba.sentinel.controller;
 
-import org.apache.tomcat.jni.Time;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2020/9/5 12:37
  */
 @RestController
+@Slf4j
 public class FlowLimitController {
     @GetMapping("/testA")
     public String testA() throws InterruptedException {
@@ -25,5 +26,24 @@ public class FlowLimitController {
 
         return "------testB";
     }
+
+    @GetMapping("/testRt")
+    public String testRt() {
+        try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
+        log.info("testRt 测试");
+
+        return "------testRt";
+    }
+
+    @GetMapping("/testExceptionRate")
+    public String testExceptionRate()
+    {
+        log.info("testExceptionRate 测试");
+        int age = 10/0;
+        return "------testExceptionRate";
+
+    }
+
+
 
 }
