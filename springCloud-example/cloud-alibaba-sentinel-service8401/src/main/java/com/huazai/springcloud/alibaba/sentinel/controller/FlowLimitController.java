@@ -30,7 +30,7 @@ public class FlowLimitController {
     @GetMapping("/testRt")
     public String testRt() {
         try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
-        log.info("testRt 测试");
+        log.info("平均响应时间测试");
 
         return "------testRt";
     }
@@ -38,9 +38,18 @@ public class FlowLimitController {
     @GetMapping("/testExceptionRate")
     public String testExceptionRate()
     {
-        log.info("testExceptionRate 测试");
+        log.info("异常比例测试");
         int age = 10/0;
         return "------testExceptionRate";
+
+    }
+
+    @GetMapping("/testExceptionCount")
+    public String testExceptionCount()
+    {
+        log.info("异常数测试");
+        int age = 10/0;
+        return "------testExceptionCount";
 
     }
 
