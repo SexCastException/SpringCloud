@@ -1,4 +1,4 @@
-package com.huazai.springcloud.alibaba.provider.payment.controller;
+package com.huazai.springcloud.alibaba.provider.nacos.payment.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author pyh
- * @date 2020/8/27 22:31
+ * @date 2020/8/28 19:47
  */
 @RestController
 public class PaymentController {
@@ -15,9 +15,8 @@ public class PaymentController {
     private String serverPort;
 
     @GetMapping(value = "/payment/nacos/{id}")
-    public String getPayment(@PathVariable("id") Integer id)
-    {
-        return "nacos registry, serverPort: "+ serverPort+"\t id："+id;
+    public String getPayment(@PathVariable("id") Integer id) {
+        return "nacos registry, serverPort: " + serverPort + "\t id：" + id;
     }
 
 }
