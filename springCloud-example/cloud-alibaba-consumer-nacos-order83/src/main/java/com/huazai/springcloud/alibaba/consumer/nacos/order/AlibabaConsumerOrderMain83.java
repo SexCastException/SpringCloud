@@ -1,4 +1,4 @@
-package com.huazai.springcloud.alibaba.consumer.order;
+package com.huazai.springcloud.alibaba.consumer.nacos.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

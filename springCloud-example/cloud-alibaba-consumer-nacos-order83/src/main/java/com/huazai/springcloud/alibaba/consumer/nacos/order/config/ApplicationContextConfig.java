@@ -1,4 +1,4 @@
-package com.huazai.springcloud.alibaba.consumer.order.config;
+package com.huazai.springcloud.alibaba.consumer.nacos.order.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
