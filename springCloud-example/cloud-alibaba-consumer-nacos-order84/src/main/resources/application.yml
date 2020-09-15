@@ -14,6 +14,7 @@ spring:
         dashboard: localhost:8080
         port: 8719  #默认8719，假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口
 
+#消费者将要去访问的微服务名称 （注册成功进nacos的微服务提供者）
 service-url:
   nacos-user-service: http://nacos-payment-provider
 
