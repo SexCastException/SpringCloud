@@ -1,11 +1,10 @@
-package com.huazai.springcloud.alibaba.seata.order.service.service.impl;
+package com.huazai.springcloud.alibaba.seata.storage.service.service.impl;
 
-import com.huazai.springcloud.alibaba.seata.order.service.dao.StorageDao;
-import com.huazai.springcloud.alibaba.seata.order.service.service.StorageService;
+import com.huazai.springcloud.alibaba.seata.storage.service.dao.StorageDao;
+import com.huazai.springcloud.alibaba.seata.storage.service.service.StorageService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @author pyh
@@ -14,7 +13,7 @@ import javax.annotation.Resource;
 @Service
 @Slf4j
 public class StorageServiceImpl implements StorageService {
-    @Resource
+    @Autowired
     private StorageDao storageDao;
 
     /**

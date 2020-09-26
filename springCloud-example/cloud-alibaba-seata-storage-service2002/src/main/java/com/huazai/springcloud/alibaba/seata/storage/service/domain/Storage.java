@@ -1,4 +1,4 @@
-package com.huazai.springcloud.alibaba.seata.order.service.domain;
+package com.huazai.springcloud.alibaba.seata.storage.service.domain;
 
 import lombok.Data;
 

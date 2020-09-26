@@ -1,4 +1,4 @@
-package com.huazai.springcloud.alibaba.seata.order.service;
+package com.huazai.springcloud.alibaba.seata.storage.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,11 +9,11 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @author pyh
  * @date 2020/9/22 22:49
  */
-@SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient
-public class SeataOrderMain2002 {
+@SpringBootApplication/*(exclude = DataSourceAutoConfiguration.class)*///取消数据源自动创建的配置
+public class SeataStorageMain2002 {
     public static void main(String[] args) {
-        SpringApplication.run(SeataOrderMain2002.class, args);
+        SpringApplication.run(SeataStorageMain2002.class, args);
     }
 }

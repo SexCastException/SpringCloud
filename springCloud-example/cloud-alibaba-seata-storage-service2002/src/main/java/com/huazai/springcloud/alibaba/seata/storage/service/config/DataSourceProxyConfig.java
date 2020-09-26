@@ -1,4 +1,5 @@
-package com.huazai.springcloud.alibaba.seata.order.service.config;
+/*
+package com.huazai.springcloud.alibaba.seata.storage.service.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;
@@ -13,10 +14,12 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
 
+*/
 /**
  * @author pyh
  * @date 2020/9/23 21:01
- */
+ *//*
+
 @Configuration
 public class DataSourceProxyConfig {
     @Value("${mybatis.mapperLocations}")
@@ -43,3 +46,4 @@ public class DataSourceProxyConfig {
     }
 
 }
+*/
