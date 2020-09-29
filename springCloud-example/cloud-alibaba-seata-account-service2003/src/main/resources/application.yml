@@ -1,5 +1,5 @@
 server:
-  port: 2001
+  port: 2003
 
 spring:
   application:
@@ -8,13 +8,13 @@ spring:
     alibaba:
       seata:
         #自定义事务组名称需要与seata-server中的对应
-        tx-service-group: pyh_learn_group
+        tx-service-group: default
     nacos:
       discovery:
         server-addr: localhost:8848
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seata_order
+    url: jdbc:mysql://localhost:3306/seata_account?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
 
