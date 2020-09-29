@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
  * @date 2020/9/23 20:55
  */
 @Mapper
-@Repository
 public interface StorageDao {
     /**
      * 扣减库存信息

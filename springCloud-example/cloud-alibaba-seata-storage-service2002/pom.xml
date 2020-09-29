@@ -13,21 +13,21 @@
 
     <dependencies>
         <!--seata-->
-        <!--<dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
-            <exclusions>
+            <!--<exclusions>
                 <exclusion>
                     <artifactId>seata-all</artifactId>
                     <groupId>io.seata</groupId>
                 </exclusion>
-            </exclusions>
+            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-all</artifactId>
             <version>0.9.0</version>
-        </dependency>-->
+        </dependency>
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>

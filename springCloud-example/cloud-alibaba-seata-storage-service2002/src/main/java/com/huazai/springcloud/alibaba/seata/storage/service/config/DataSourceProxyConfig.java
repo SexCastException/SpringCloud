@@ -1,4 +1,3 @@
-/*
 package com.huazai.springcloud.alibaba.seata.storage.service.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -10,17 +9,18 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
 
-*/
 /**
  * @author pyh
  * @date 2020/9/23 21:01
- *//*
+ **/
 
 @Configuration
+@Order(1)
 public class DataSourceProxyConfig {
     @Value("${mybatis.mapperLocations}")
     private String mapperLocations;
@@ -44,6 +44,4 @@ public class DataSourceProxyConfig {
         sqlSessionFactoryBean.setTransactionFactory(new SpringManagedTransactionFactory());
         return sqlSessionFactoryBean.getObject();
     }
-
 }
-*/

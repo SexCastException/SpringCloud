@@ -8,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/9/23 21:00
  */
 @Configuration
-@MapperScan({"com.huazai.springcloud.alibaba.seata.order.service.dao"})
+@MapperScan({"com.huazai.springcloud.alibaba.seata.storage.service.dao"})
 public class MyBatisConfig {
 }
